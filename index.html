@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tender Tides – Peaceful Nights. Joyful Mornings.</title>
+  <meta name="description" content="Tender Tides – holistic wellness and sleep support for babies, caretakers, and mothers. Curated rituals, gentle products, and a soothing sea-to-sky design." />
+  <style>
+    :root{
+      --sky:#7ec8e3;           /* sea-sky gradient top */
+      --sunset:#fcb69f;        /* warm sunset */
+      --sea:#2a7f8e;           /* deep sea */
+      --sea-2:#2e8fa0;         /* lighter sea */
+      --sand:#f7efe3;          /* background cards */
+      --ink:#2f3e46;           /* text */
+      --coral:#ff7f50;         /* accent */
+      --foam:#e6f5f7;          /* subtle foam */
+    }
+    html,body{margin:0;padding:0}
+    body{font-family:System-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--sky),var(--sunset) 65%);}
+    a{color:var(--coral)}
+    .wrap{max-width:1100px;margin-inline:auto;padding-inline:clamp(16px,3vw,28px)}
+    header.site{
+      position:relative;
+      padding:clamp(18px,2.2vw,28px) 0;
+      display:flex;align-items:center;justify-content:space-between;
+    }
+    .brand{display:flex;align-items:center;gap:.6rem;font-weight:700;letter-spacing:.5px}
+    .brand svg{width:34px;height:34px}
+    nav ul{display:flex;gap:1rem;list-style:none;margin:0;padding:0}
+    nav a{display:inline-block;padding:.4rem .6rem;border-radius:8px;text-decoration:none;color:var(--ink)}
+    nav a:hover, nav a:focus{background:rgba(255,255,255,.5);outline:none}
+    .menu-btn{display:none;background:transparent;border:0;padding:.3rem;border-radius:8px}
+
+    /* Hero */
+    .hero{position:relative;overflow:hidden}
+    .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(16px,4vw,36px);align-items:center;padding-block:clamp(42px,8vw,92px)}
+    h1{font-size:clamp(2rem,4.5vw,3.5rem);line-height:1.1;margin:0}
+    .sub{margin:.75rem 0 1.25rem;font-size:clamp(1rem,1.6vw,1.25rem)}
+    .cta{display:inline-flex;gap:.6rem;align-items:center;background:var(--coral);color:white;border:0;padding:.8rem 1.1rem;border-radius:12px;font-weight:600;text-decoration:none}
+    .cta:hover{filter:brightness(.95)}
+
+    /* Decorative waves */
+    .wave{display:block;line-height:0}
+    .wave svg{display:block;width:100%;height:auto}
+
+    /* Sections */
+    section{scroll-margin-top:90px}
+    .section{background:var(--sand);border-radius:20px;padding:clamp(20px,3vw,36px);margin-block:clamp(22px,3.2vw,40px);box-shadow:0 8px 30px rgba(0,0,0,.08)}
+    .section h2{margin-top:0;font-size:clamp(1.4rem,2.6vw,2rem)}
+
+    /* Cards / grid */
+    .grid{display:grid;gap:clamp(14px,2vw,22px)}
+    .grid.cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+    .card{background:white;border-radius:16px;padding:18px;box-shadow:0 6px 20px rgba(0,0,0,.06)}
+    .pill{display:inline-block;background:var(--foam);padding:.35rem .6rem;border-radius:999px;font-size:.85rem}
+
+    /* Footer */
+    footer{background:linear-gradient(180deg,var(--sea-2),var(--sea));color:white;margin-top:40px}
+    footer .wrap{padding-block:28px}
+
+    /* Simple animations */
+    @keyframes bob{0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+    .boat{animation:bob 6s ease-in-out infinite}
+
+    /* Responsive */
+    @media (max-width: 900px){
+      .hero .wrap{grid-template-columns:1fr}
+      nav ul{display:none;}
+      .menu-btn{display:inline-flex}
+      .nav-open ul{display:flex;flex-direction:column;position:absolute;right:16px;top:70px;background:white;padding:10px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.15)}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header class="site wrap" aria-label="Primary">
+    <a class="brand" href="#home">
+      <!-- tiny logo mark: sun over sea -->
+      <svg aria-hidden="true" viewBox="0 0 64 64" role="img"><circle cx="32" cy="26" r="10" fill="#ffd7b5"/><rect x="0" y="36" width="64" height="12" fill="#6bc1d6"/><rect x="0" y="48" width="64" height="12" fill="#2e8fa0"/></svg>
+      <span>Tender Tides</span>
+    </a>
+    <button class="menu-btn" aria-label="Toggle menu" id="menuBtn">☰</button>
+    <nav id="nav"><ul>
+      <li><a href="#rituals">Ritual Pack</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul></nav>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero" aria-label="Hero">
+    <div class="wrap">
+      <div>
+        <h1>🌙 Peaceful Nights. Joyful Mornings.</h1>
+        <p class="sub">Holistic wellness and sleep support for babies, caretakers, and mothers.</p>
+        <a class="cta" href="#rituals" aria-label="Explore the Rituals">Explore the Rituals</a>
+      </div>
+      <div aria-hidden="false" role="img" aria-label="A tiny manger-like boat cradling a sleeping baby on calm waves at sunset" title="Little boat manger at sea">
+        <!-- SVG illustration: sea meeting sky, waves, and a manger-like boat -->
+        <svg class="boat" viewBox="0 0 520 360" xmlns="http://www.w3.org/2000/svg">
+          <!-- sky gradient -->
+          <defs>
+            <linearGradient id="sky" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#7ec8e3"/>
+              <stop offset="70%" stop-color="#fcb69f"/>
+            </linearGradient>
+            <linearGradient id="sea" x1="0" x2="0" y1="0" y2="1">
+              <stop offset="0%" stop-color="#2e8fa0"/>
+              <stop offset="100%" stop-color="#2a7f8e"/>
+            </linearGradient>
+          </defs>
+          <rect width="520" height="220" fill="url(#sky)"/>
+          <!-- sun -->
+          <circle cx="420" cy="90" r="26" fill="#ffd7b5" opacity="0.9"/>
+          <!-- sea -->
+          <rect y="200" width="520" height="160" fill="url(#sea)"/>
+          <!-- gentle waves -->
+          <path d="M0 220 Q40 210 80 220 T160 220 T240 220 T320 220 T400 220 T480 220 T560 220" stroke="#e6f5f7" stroke-width="3" fill="none" opacity="0.9"/>
+          <path d="M0 240 Q50 230 100 240 T200 240 T300 240 T400 240 T500 240 T600 240" stroke="#cceff3" stroke-width="3" fill="none" opacity="0.9"/>
+          <!-- manger-like boat -->
+          <g transform="translate(200,205)">
+            <!-- boat hull (manger shape) -->
+            <path d="M0 0 C 20 30, 100 30, 120 0 C 116 18, 98 38, 60 44 C 22 38, 4 18, 0 0 Z" fill="#8b5e3c" stroke="#6f472e" stroke-width="2"/>
+            <!-- straw bedding -->
+            <ellipse cx="60" cy="18" rx="48" ry="12" fill="#e8d7a4" stroke="#c9b372"/>
+            <!-- sleeping baby as simple form -->
+            <g transform="translate(40,4)">
+              <ellipse cx="20" cy="10" rx="14" ry="10" fill="#fde3cf"/>
+              <path d="M6 10 Q20 16 34 10 Q26 6 20 6 Q14 6 6 10 Z" fill="#c2e7ef"/>
+              <path d="M14 10 Q20 12 26 10" stroke="#6b4f3b" stroke-width="2" fill="none"/>
+              <circle cx="16" cy="10" r="1.6" fill="#6b4f3b"/>
+              <circle cx="24" cy="10" r="1.6" fill="#6b4f3b"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <!-- wave divider to next section -->
+    <div class="wave" aria-hidden="true">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path fill="#f7efe3" d="M0,64L60,58.7C120,53,240,43,360,58.7C480,75,600,117,720,117.3C840,117,960,75,1080,69.3C1200,64,1320,96,1380,112L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+      </svg>
+    </div>
+  </main>
+
+  <!-- Ritual pack -->
+  <section id="rituals" class="wrap section" aria-labelledby="rituals-h">
+    <h2 id="rituals-h">The Tender Tides Sleep Ritual Pack</h2>
+    <p>Begin your journey with our curated starter pack — gentle tools for bedtime that nurture both baby and mother.</p>
+    <div class="grid cols-2" id="shop">
+      <div class="card"><span class="pill">Sleep • Care</span>
+        <h3>Magnesium Sleep Butter 🌿</h3>
+        <p>Magnesium calm in a gentle cream — helping little ones drift into dreamland naturally.</p>
+        <a class="cta" href="#">Shop</a>
+      </div>
+      <div class="card"><span class="pill">Comfort</span>
+        <h3>Organic Cotton Swaddle 🌀</h3>
+        <p>Breathable, soft, and soothing. Wrap your baby in a tide of comfort.</p>
+        <a class="cta" href="#">Shop</a>
+      </div>
+      <div class="card"><span class="pill">Bath • Soothe</span>
+        <h3>Chamomile & Lavender Soak 🛁</h3>
+        <p>Calming botanicals that prepare your baby for deep rest.</p>
+        <a class="cta" href="#">Shop</a>
+      </div>
+      <div class="card"><span class="pill">For Mom</span>
+        <h3>Organic Chamomile Tea 🍵</h3>
+        <p>A mother’s calm becomes a baby’s calm. Nourish your nervous system too.</p>
+        <a class="cta" href="#">Shop</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Tender Tides -->
+  <section id="why" class="wrap section" aria-labelledby="why-h">
+    <h2 id="why-h">A Holistic Approach to Baby Wellness</h2>
+    <p>Every tide brings renewal. Our mission is to support parents and caretakers with products that are safe, sustainable, and soothing — so babies grow with love, and caretakers thrive with peace of mind.</p>
+    <div class="grid cols-3">
+      <div class="card">
+        <h3>🌱 Organic & Non‑Toxic</h3>
+        <p>We curate gentle, trusted options made without harsh chemicals.</p>
+      </div>
+      <div class="card">
+        <h3>🌊 Curated with Care</h3>
+        <p>Thoughtful recommendations to simplify bedtime, not complicate it.</p>
+      </div>
+      <div class="card">
+        <h3>💕 For Baby + Mom + Caretaker</h3>
+        <p>We honor the whole family with rituals that bring rest to everyone.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Teaser -->
+  <section class="wrap section" aria-labelledby="blog-h">
+    <h2 id="blog-h">Learn, Nurture, Grow</h2>
+    <p>Discover gentle bedtime routines, holistic wellness tips, and caretaker resources designed to bring balance to your nights and mornings.</p>
+    <a class="cta" href="#">Read the Blog</a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="wrap section" aria-labelledby="about-h">
+    <h2 id="about-h">Our Story</h2>
+    <p>Tender Tides was born from a simple truth: when babies rest well, families thrive. We are mothers, caretakers, and dreamers who know the challenges of sleepless nights. Our vision is to support families with holistic, natural solutions that bring calm to bedtime — and joy to mornings.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="wrap section" aria-labelledby="contact-h">
+    <h2 id="contact-h">Let’s Connect</h2>
+    <p>Whether you’re a parent, babynurse, or caretaker — we’d love to hear from you. Reach out with questions, ideas, or stories of your own Tender Tides.</p>
+    <form class="card" onsubmit="event.preventDefault(); alert('Thanks! We\'ll be in touch soon.');" aria-label="Contact form">
+      <div style="display:grid;gap:12px;grid-template-columns:1fr 1fr;">
+        <label>First name<br><input required name="first" aria-label="First name" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid #cfd8dc"></label>
+        <label>Last name<br><input required name="last" aria-label="Last name" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid #cfd8dc"></label>
+      </div>
+      <div style="margin-top:12px">
+        <label>Email<br><input required type="email" name="email" aria-label="Email" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid #cfd8dc"></label>
+      </div>
+      <div style="margin-top:12px">
+        <label>Message<br><textarea rows="4" aria-label="Message" style="width:100%;padding:.7rem;border-radius:10px;border:1px solid #cfd8dc"></textarea></label>
+      </div>
+      <button class="cta" type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer with wave top -->
+  <div class="wave" aria-hidden="true">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+      <path fill="#2e8fa0" d="M0,64L60,58.7C120,53,240,43,360,58.7C480,75,600,117,720,117.3C840,117,960,75,1080,69.3C1200,64,1320,96,1380,112L1440,128L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path>
+    </svg>
+  </div>
+  <footer role="contentinfo">
+    <div class="wrap">
+      <nav aria-label="Footer">
+        <a href="#home" style="color:white;text-decoration:none;margin-right:10px">Home</a>
+        <a href="#shop" style="color:white;text-decoration:none;margin-right:10px">Shop</a>
+        <a href="#about" style="color:white;text-decoration:none;margin-right:10px">About</a>
+        <a href="#contact" style="color:white;text-decoration:none">Contact</a>
+      </nav>
+      <p style="margin:.8rem 0 0">Tender Tides may earn from qualifying purchases, at no extra cost to you. We only recommend products we truly trust.</p>
+      <p style="opacity:.8">© <span id="yr"></span> Tender Tides</p>
+    </div>
+  </footer>
+
+  <script>
+    // mobile nav toggle
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('nav');
+    btn.addEventListener('click',()=>document.body.classList.toggle('nav-open'));
+
+    // current year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // smooth scroll (basic)
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
+</body>
+</html>
